@@ -1,8 +1,9 @@
 #= require jquery
-#= require jquery_ujs
-#= require jquery.validate
 #= require bootstrap/custom
 #= require facebook_popup
-#= require validator
-#= require user
-#= require contact_form
+
+#= require jquery.mousewheel
+#= require perfect-scrollbar-0.3.3/perfect-scrollbar
+
+#= require global
+

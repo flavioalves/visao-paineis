@@ -21,11 +21,11 @@ gem 'redis'
 # frontend gems
 gem 'ckeditor'
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+#gem 'jquery-ui-rails'
 gem 'jquery-migrate-rails'
 gem 'mercury-rails'
-gem 'font-awesome-rails'
 gem 'chosen-rails'
+gem "font-awesome-rails"
 
 # external services
 gem 'newrelic_rpm'
@@ -73,7 +73,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'rack-mini-profiler'
-  gem 'kss-rails'
 end
 
 group :production do

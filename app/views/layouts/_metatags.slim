@@ -5,6 +5,9 @@ meta name="author" content="61bits — http://61bits.com.br"
 meta name="description" content="#{content_for?(:description) ? yield(:description) : 'VisaoPaineis'}"
 meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"
 
+meta name="geo.placename" content="WC1B, london"
+meta name="geo.position" content="51.51954;-0.125549"
+
 // opengraph metatags
 meta property="og:image" content="http://#{ENV['APP_HOSTNAME']}/og-image.png"
 meta property="og:type" content="website"
@@ -13,6 +16,7 @@ meta property="og:title" content="#{content_for?(:title) ? yield(:title).to_s + 
 meta property="og:description" content="#{content_for?(:description) ? yield(:description) : 'VisaoPaineis'}"
 meta property="og:locale" content="pt_BR"
 // meta property="fb:admins" content="#admin-id" 
+
 
 // humans.txt
 link rel="author" href="/humans.txt"

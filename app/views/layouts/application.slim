@@ -18,14 +18,14 @@ html.no-js lang="#{I18n.locale}"
 
     == csrf_meta_tags
     == stylesheet_link_tag 'application', media: 'all'
-    == javascript_include_tag 'top_javascripts'
+    == javascript_include_tag 'top_javascripts'    
+
     /[if lt IE 9]
       == javascript_include_tag 'html5shiv-printshiv'
 
   body class="#{yield :body_class}" data-development-grid="hide"
     == render 'layouts/browser_warning'
     == render 'layouts/mercury_edit_button' if current_admin_user.present?
-    == render 'layouts/header'
 
     section.page
       - if notice.present?
@@ -35,8 +35,7 @@ html.no-js lang="#{I18n.locale}"
 
       == yield
 
-    == render 'layouts/footer'
-
+    script src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"
     == javascript_include_tag 'application'
     /[if lt IE 9]
       == javascript_include_tag 'nwmatcher-1.2.5'
