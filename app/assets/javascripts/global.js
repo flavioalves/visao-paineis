@@ -138,7 +138,7 @@ function initialize_map() {
 	directionsDisplay.setPanel(document.getElementById("directions-result"));
 
 	var image = new google.maps.MarkerImage(
-		'images/icon_marker.png',
+		image_path('icon_marker.png'),
 		new google.maps.Size(42,62),
 		new google.maps.Point(0,0),
 		new google.maps.Point(21,62)

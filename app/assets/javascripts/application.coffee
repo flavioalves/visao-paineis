@@ -4,6 +4,6 @@
 
 #= require jquery.mousewheel
 #= require perfect-scrollbar-0.3.3/perfect-scrollbar
-
+#= require images
 #= require global
 
