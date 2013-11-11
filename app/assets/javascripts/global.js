@@ -1,7 +1,7 @@
 $(function(){
 	//$('#search2').fancyInput();
-	$('#directions-wrapper').perfectScrollbar();
-	$('.floating-container').perfectScrollbar();
+	//$('#directions-wrapper').perfectScrollbar();
+	//$('.floating-container').perfectScrollbar();
 
 	
 	$(".block-wrapper").bind("mousewheel",function(ev, delta) {

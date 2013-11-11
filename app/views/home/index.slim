@@ -1,19 +1,16 @@
-.container-fluid
-  .row-fluid.main-row
-    .span6.main-wrapper
+.row
+  .col-md-6.content-wrapper
+    == render 'layouts/header'
 
-      == render 'layouts/header'
+    .row
+      .container-content-block.tab-content         
+        == render 'home/about'
+        == render 'home/products'
+        == render 'home/places'
+        == render 'home/clients'                            
+      == render 'layouts/footer'   
+          
+  .col-md-6.map-wrapper
+    == render 'layouts/map'    
 
-      .row-fluid.block-wrapper
-        .block#section-1          
-          == render 'home/about'
-          /== render 'home/service'
-          /== render 'home/gallery'
-          /== render 'home/testimonials'                            
-        == render 'layouts/footer'   
-            
-    .span6.span-fixed-sidebar.map-side-span
-      == render 'layouts/map'    
-      /== render 'layouts/float-box'                 
-      /== render 'layouts/menu' 
-            
+          

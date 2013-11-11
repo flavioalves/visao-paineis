@@ -18,36 +18,42 @@ gem 'draper'
 gem 'resque'
 gem 'redis'
 
-# frontend gems
-gem 'ckeditor'
-gem 'jquery-rails'
-#gem 'jquery-ui-rails'
-gem 'jquery-migrate-rails'
-gem 'mercury-rails'
-gem 'chosen-rails'
-gem "font-awesome-rails"
 
 # external services
 gem 'newrelic_rpm'
 gem 'sentry-raven'
 
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-  gem 'font_assets'
-  gem 'modernizr-rails'
-  gem 'selectivizr-rails'
-  # compass and plugins
-  gem 'compass-rails'
-  gem 'compass-normalize'
-  gem 'singularitygs'
-  gem 'singularity-extras'
-  gem 'breakpoint'
-  gem 'oily_png'
-  gem 'color-schemer'
-  gem 'toolkit'
-end
+# frontend gems
+gem 'ckeditor'
+gem 'jquery-rails'
+gem 'jquery-migrate-rails'
+gem 'mercury-rails'
+gem 'chosen-rails'
+
+#assets
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
+gem 'font_assets'
+gem 'modernizr-rails'
+gem 'selectivizr-rails'
+
+# compass and plugins
+gem 'compass-rails'
+gem 'compass-normalize'
+gem 'singularitygs'
+gem 'singularity-extras'
+gem 'breakpoint'
+gem 'oily_png'
+gem 'color-schemer'
+gem 'toolkit'
+
+# twitter bootstrap
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
+
+gem "font-awesome-rails",        '~> 3.2'
+
 
 group :test, :development do
   gem 'rspec-rails'

@@ -1,9 +1,6 @@
 #= require jquery
-#= require bootstrap/custom
+#= require twitter/bootstrap
 #= require facebook_popup
-
-#= require jquery.mousewheel
-#= require perfect-scrollbar-0.3.3/perfect-scrollbar
 #= require images
 #= require global
 
