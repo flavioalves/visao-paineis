@@ -2,5 +2,5 @@
 #= require twitter/bootstrap
 #= require facebook_popup
 #= require images
-#= require global
+#= require maps
 

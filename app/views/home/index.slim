@@ -4,13 +4,15 @@
 
     .row
       .container-content-block.tab-content         
-        == render 'home/about'
+        == render 'home/home'
         == render 'home/products'
         == render 'home/places'
         == render 'home/clients'                            
-      == render 'layouts/footer'   
+      //== render 'layouts/footer'   
           
   .col-md-6.map-wrapper
-    == render 'layouts/map'    
+    .row
+      .col-md-12
+        #map-canvas 
 
           
