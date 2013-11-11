@@ -1,35 +1,13 @@
 header#header-page
-
-  #header-page-inner
-
-    - if request.fullpath == root_path
-      .logo-page NOME SITE
-    - else
-      .logo-page
-        a href="#{root_path}" title="" NOME SITE
-
-    nav.nav-page role="navigation"
-      ul
-        li.active
-          a href="/" title="Item 1" Item 1
-        li
-          a href="/" title="Item 2" Item 2
-
-    nav.nav-user role="navigation"
-      ul
-        - if current_user.present?
-          li.item-avatar
-            .user-avatar.small
-              .user-avatar-inner
-                = image_tag(current_user.avatar.thumb.url)
-
-          li.item-username Olá <b>#{current_user.name.split(" ").first}</b>
-
-          li.item-account
-            a href="#{edit_user_path}" title="Minha Conta" Minha Conta
-
-          li.item-logout
-            a href="#{destroy_user_session_path}" title="Sair" Sair
-        - else
-          li.item-login
-            a href="#{user_omniauth_connect_path(:facebook)}" title="Entrar com o Facebook" class="popup button facebook-connect" data-width="600" data-height="400" Entrar com o Facebook
+  .row-fluid  
+    .span12
+      .logo_top 
+      ul.menu
+        li 
+          a href="#" home
+        li 
+          a href="#" produtos
+        li 
+          a href="#" localizações
+        li 
+          a href="#" clientes                              

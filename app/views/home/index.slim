@@ -1,23 +1,19 @@
 .container-fluid
   .row-fluid.main-row
-    .span5.main-wrapper      
-      .row-fluid.logo
-        .span12
-          .logo_top <i class="icon-fire"></i>
-          h1 Visão painéis
-          <hr>
+    .span6.main-wrapper
+
+      == render 'layouts/header'
 
       .row-fluid.block-wrapper
         .block#section-1          
           == render 'home/about'
-          == render 'home/service'
-          == render 'home/gallery'
-          == render 'home/testimonials'                    
-        
+          /== render 'home/service'
+          /== render 'home/gallery'
+          /== render 'home/testimonials'                            
         == render 'layouts/footer'   
             
-      .span7.span-fixed-sidebar
-        == render 'layouts/map'    
-        == render 'layouts/float-box'                 
-        == render 'layouts/menu' 
+    .span6.span-fixed-sidebar.map-side-span
+      == render 'layouts/map'    
+      /== render 'layouts/float-box'                 
+      /== render 'layouts/menu' 
             
