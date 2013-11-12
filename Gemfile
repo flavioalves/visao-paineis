@@ -26,7 +26,7 @@ gem 'sentry-raven'
 # frontend gems
 gem 'ckeditor'
 gem 'jquery-rails'
-gem 'jquery-migrate-rails'
+gem 'jquery-ui-rails'
 gem 'mercury-rails'
 gem 'chosen-rails'
 
@@ -37,15 +37,8 @@ gem 'uglifier'
 gem 'font_assets'
 gem 'modernizr-rails'
 gem 'selectivizr-rails'
-
-# compass and plugins
 gem 'compass-rails'
 gem 'compass-normalize'
-gem 'singularitygs'
-gem 'singularity-extras'
-gem 'breakpoint'
-gem 'oily_png'
-gem 'color-schemer'
 gem 'toolkit'
 
 # twitter bootstrap
