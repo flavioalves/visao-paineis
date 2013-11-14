@@ -37,12 +37,7 @@ function setMarkers(map, locations) {
 
   var infowindow = new google.maps.InfoWindow();
   var bounds = new google.maps.LatLngBounds();
-  var image = {
-    url: image_path('icon_marker.png'),
-    size: new google.maps.Size(42,62),
-    origin: new google.maps.Point(0,0),
-    anchor: new google.maps.Point(21, 62)
-  };
+  var image = image_path('icon_marker.png');    
 
   for (i = 0; i < locations.length; i++) {  
     var place = locations[i];
@@ -54,11 +49,11 @@ function setMarkers(map, locations) {
       map: map,      
       position: placeLatLng,
       title: place[0],
+      icon: image
       //zIndex: place[3]      
     });  
 
     bounds.extend(marker.position);
-
     
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {
