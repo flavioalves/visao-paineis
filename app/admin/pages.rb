@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 ActiveAdmin.register Page do
-  menu parent: I18n.t('app.active_admin.content'), priority: 1
+  #menu parent: I18n.t('app.active_admin.content'), priority: 3
+  menu false
 
   config.per_page = 10
   
