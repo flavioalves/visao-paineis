@@ -2,12 +2,12 @@
  * Titulo do ponto, LatLng e zIndex para os pontos do mapa.
  */
 var locations = [
-  ['Placa EPTG',-48.031625747680664,-15.827682005280142, 4],
-  ['Cruzeiro novo', -47.93337106704712,-15.795288766569723, 5],
-  ['Entrada lago norte', -47.89412498474121,-15.727264699546955, 3],
-  ['Lago norte', -47.87168025970459,-15.727120118986408, 2],
-  ['Guará', -47.967467308044434,-15.836063349474387, 1],
-  ['Taguatinga Centro', -48.08664321899414,-15.834700888616627, 5]
+  ['Placa EPTG',-48.031625747680664,-15.827682005280142],
+  ['Cruzeiro novo', -47.93337106704712,-15.795288766569723],
+  ['Entrada lago norte', -47.89412498474121,-15.727264699546955],
+  ['Lago norte', -47.87168025970459,-15.727120118986408],
+  ['Guará', -47.967467308044434,-15.836063349474387],
+  ['Taguatinga Centro', -48.08664321899414,-15.834700888616627]
 ];
 
 
@@ -54,18 +54,45 @@ function setMarkers(map, locations) {
     });  
 
     bounds.extend(marker.position);
-    
+
+    var panoramicBoxContainer = '<div id="content" style="width:200px;height:200px;"></div>';    
+
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent(locations[i][0]);
+      return function() {        
+        var pointInfo = '<div style="max-width:200px"><h6>' + locations[i][0] + '</h6></div>';
+
+        infowindow.setContent(pointInfo + panoramicBoxContainer);
         infowindow.open(map, marker);
+
+        //creating panoramic view at each point
+        var pano = null;
+        google.maps.event.addListener(infowindow, 'domready', function() {
+          if (pano != null) {
+            pano.unbind("position");
+            pano.setVisible(false);
+          }
+          pano = new google.maps.StreetViewPanorama(document.getElementById("content"), {
+            navigationControl: false,      
+            enableCloseButton: false,
+            addressControl: false,
+            linksControl: false
+          });
+          pano.bindTo("position", marker);
+          pano.setVisible(true);
+        });
+
+        google.maps.event.addListener(infowindow, 'closeclick', function() {
+          pano.unbind("position");
+          pano.setVisible(false);
+          pano = null;
+        });
+
       }
     })(marker, i));  
   }
 
   //now fit the map to the newly inclusive bounds
   map.fitBounds(bounds);
-
 }
 
 //initialize map
