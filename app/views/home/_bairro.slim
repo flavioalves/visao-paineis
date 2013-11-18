@@ -1,9 +1,9 @@
 .panel.panel-default
   .panel-heading
     h4.panel-title
-      a data-toggle="collapse" data-parent="#{'#accordion-' + type}" href="#{'#' + placas.bairro.nome.parameterize}" #{placas.bairro.nome}    
+      a data-toggle="collapse" data-parent="#{'#accordion-' + type}" href="#{'#' + type + '-' + placas.bairro.nome.parameterize}" #{placas.bairro.nome}    
 
-  .panel-collapse.collapse id="#{placas.bairro.nome.parameterize}"
+  .panel-collapse.collapse id="#{type + '-'  + placas.bairro.nome.parameterize}"
     .panel-body
 
       table.table.table-hover
