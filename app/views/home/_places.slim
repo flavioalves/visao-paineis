@@ -10,7 +10,7 @@
                 
       #df.panel-collapse.collapse
         .panel-body.list-places-panel          
-          = render partial: 'modules/list_places', locals: {placas: @placas, uf:  'df'}
+          = render partial: 'modules/list_places', locals: {placas: @placas_df, uf:  'df'}
 
     .panel.panel-default
       .panel-heading
@@ -20,5 +20,5 @@
                 
       #go.panel-collapse.collapse
         .panel-body.list-places-panel
-          = render partial: 'modules/list_places', locals: {placas: @placas, uf:  'go'}
+          = render partial: 'modules/list_places', locals: {placas: @placas_go, uf:  'go'}
      

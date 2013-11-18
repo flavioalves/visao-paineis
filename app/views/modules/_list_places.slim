@@ -9,13 +9,26 @@ ul.nav.nav-tabs
 .tab-content
   .tab-pane.active id="outdoor-#{uf}"
     .panel-group#accordion-outdoor
-      = render partial: "modules/bairro", collection: @placas, as: :placas, locals: {type: "outdoor"}
-                       
+      - if placas.where('categoria' => 'Outdoor').count() > 0
+        = render partial: "modules/bairro", collection: placas.where('categoria' => 'Outdoor'), as: :placas, locals: {type: "outdoor"}
+      - else
+        .panel.no-result
+          p.alert.alert-danger Não existem placas nesta categoria
 
   .tab-pane id="front-light-#{uf}"
     .panel-group#accordion-front-light
-      = render partial: "modules/bairro", collection: @placas, as: :placas, locals: {type: "front-light"}
+      - if placas.where('categoria' => 'Front-light').count() > 0
+        = render partial: "modules/bairro", collection: placas.where('categoria' => 'Front-light'), as: :placas, locals: {type: "front-light"}
+      - else
+        .panel.no-result
+          p.alert.alert-danger Não existem placas nesta categoria
 
   .tab-pane id="triedro-#{uf}"
     .panel-group#accordion-triedro
-      = render partial: "modules/bairro", collection: @placas, as: :placas, locals: {type: "triedro"}
+      - if placas.where('categoria' => 'Triedro').count() > 0
+        = render partial: "modules/bairro", collection: placas.where('categoria' => 'Triedro'), as: :placas, locals: {type: "triedro"}
+      - else
+        .panel.no-result
+          p.alert.alert-danger Não existem placas nesta categoria
+
+      
