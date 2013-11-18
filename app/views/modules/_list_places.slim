@@ -1,0 +1,21 @@
+ul.nav.nav-tabs
+  li.active
+    a href="#outdoor-#{uf}" data-toggle="tab" Outdoor
+  li
+    a href="#front-light-#{uf}" data-toggle="tab" Front-light
+  li
+    a href="#triedro-#{uf}" data-toggle="tab" Triedro
+
+.tab-content
+  .tab-pane.active id="outdoor-#{uf}"
+    .panel-group#accordion-outdoor
+      = render partial: "modules/bairro", collection: @placas, as: :placas, locals: {type: "outdoor"}
+                       
+
+  .tab-pane id="front-light-#{uf}"
+    .panel-group#accordion-front-light
+      = render partial: "modules/bairro", collection: @placas, as: :placas, locals: {type: "front-light"}
+
+  .tab-pane id="triedro-#{uf}"
+    .panel-group#accordion-triedro
+      = render partial: "modules/bairro", collection: @placas, as: :placas, locals: {type: "triedro"}
