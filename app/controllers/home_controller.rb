@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
-  def index; end
+  def index
+    @placas = Placa.includes(:bairro).all
+  end
 
 end

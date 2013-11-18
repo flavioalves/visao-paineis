@@ -1,0 +1,17 @@
+.panel.panel-default
+  .panel-heading
+    h4.panel-title
+      a data-toggle="collapse" data-parent="#{'#accordion-' + type}" href="#{'#' + placas.bairro.nome.parameterize}" #{placas.bairro.nome}    
+
+  .panel-collapse.collapse id="#{placas.bairro.nome.parameterize}"
+    .panel-body
+
+      table.table.table-hover
+        thead
+          tr
+            th
+              'Codigo
+            th
+              'Descrição/Endereço
+        tbody
+          = render partial: "list_item", collection: placas.bairro.placas, as: :placa

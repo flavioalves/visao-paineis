@@ -27,6 +27,7 @@ gem 'sentry-raven'
 gem 'ckeditor'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'jquery-migrate-rails'
 gem 'mercury-rails'
 gem 'chosen-rails'
 

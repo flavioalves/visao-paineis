@@ -1,49 +1,24 @@
 .tab-pane#places
   h1.lead Conheça nossas localizações.
 
+  .panel-group#accordion
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title
+          a data-toggle="collapse" data-parent="#accordion" href="#df"
+            'BRASÍLIA
+                
+      #df.panel-collapse.collapse
+        .panel-body.list-places-panel          
+          = render partial: 'list_places', locals: {placas: @placas}
 
-  ul.nav.nav-tabs
-    li.active
-      a href="#outdoor" data-toggle="tab" Outdoor
-    li
-      a href="#front-light" data-toggle="tab" Front-light
-    li
-      a href="#triedro" data-toggle="tab" Triedro
-
-  .tab-content
-    .tab-pane.active#outdoor
-    .tab-pane#front-light
-      .panel.panel-default
-        .panel-heading
-          h4.panel-title
-            a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-              'Asa norte
-        #collapseTwo.panel-collapse.collapse
-          .panel-body
-            table.table.table-striped
-              tr.first
-                td
-                  'Endereço A
-              tr
-                td
-                  'Endereço B
-    .tab-pane#triedro
-      .panel-group#accordion
-        .panel.panel-default
-          .panel-heading
-            h4.panel-title
-              a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                'Asa Sul        
-          #collapseOne.panel-collapse.collapse.in
-            .panel-body
-              table.table.table-striped
-                tr.first
-                  td
-                    'Endereço A
-                tr
-                  td
-                    'Endereço B
-
-
-
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title
+          a data-toggle="collapse" data-parent="#accordion" href="#go"
+            'GOIÂNIA
+                
+      #go.panel-collapse.collapse
+        .panel-body.list-places-panel
+          == render 'list_places'
      
