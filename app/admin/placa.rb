@@ -42,10 +42,10 @@ ActiveAdmin.register Placa do
     active_admin_comments
   end
   
-  controller do
-    def scoped_collection
-      Placa.includes(:bairro)
-    end
-  end
+  # controller do
+  #   def scoped_collection
+  #     Placa.includes(:bairro)
+  #   end
+  # end
 
 end
