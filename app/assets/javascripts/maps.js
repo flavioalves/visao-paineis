@@ -10,7 +10,9 @@ var locations = [
   ['Taguatinga Centro', -48.08664321899414,-15.834700888616627]
 ];
 
-
+// Map that will keep all markers to cross navigation
+window.MAP_MARKERS = {};
+window.map = {}
 function initialize() {
 
   var mapOptions = {
@@ -28,7 +30,7 @@ function initialize() {
   
   $('#map-canvas').height($(window).height());
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  window.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   setMarkers(map, locations);
 }
@@ -53,6 +55,10 @@ function setMarkers(map, locations) {
       //zIndex: place[3]      
     });  
 
+    //add to map marker
+    window.MAP_MARKERS[place[0]] = marker;
+
+    //centralize map    
     bounds.extend(marker.position);
 
     var panoramicBoxContainer = '<div id="content" style="width:200px;height:200px;"></div>';    
@@ -93,7 +99,26 @@ function setMarkers(map, locations) {
 
   //now fit the map to the newly inclusive bounds
   map.fitBounds(bounds);
+
+  //create event to map navigation
+  var list = document.getElementsByClassName('mapItem');
+  for (var i = 0; i < list.length; i++) {
+    google.maps.event.addDomListener(list[i], 'click', showAlert);
+  }
+  
+}
+
+
+function showAlert(e) {
+  
+    //Address list item   
+  var mapItemKey = $(this.getElementsByClassName("name")).text().trim();
+
+  //get respective map marker
+  var marker = window.MAP_MARKERS[mapItemKey]
+  google.maps.event.trigger(marker,'click');
 }
 
 //initialize map
 google.maps.event.addDomListener(window, 'load', initialize);
+
