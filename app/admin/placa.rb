@@ -5,7 +5,7 @@ ActiveAdmin.register Placa do
   filter :bairro, as: :select, collection: Bairro.all.map{|u| ["#{u.nome}", u.id]}      
   filter :categoria, as: :select, collection: ["Outdoor", "Front-light", "Triedro"]  
 
-  config.per_page = 20
+  config.per_page = 30
 
   index do
     column :id
@@ -20,10 +20,10 @@ ActiveAdmin.register Placa do
 
   form do |f|
     f.inputs do
-      f.input :codigo
-      f.input :descricao   
-      f.input :categoria, as: :select, collection: ["Outdoor", "Front-light", "Triedro"]      
-      f.input :bairro_id, :as => :select, :collection => Bairro.all.map{|u| ["#{u.nome}", u.id]}      
+      f.input :codigo, :required => true
+      f.input :descricao, :required => true   
+      f.input :categoria, as: :select, collection: ["Outdoor", "Front-light", "Triedro"], :required => true      
+      f.input :bairro_id, :as => :select, :collection => Bairro.all.map{|u| ["#{u.nome}", u.id]}, :required => true      
     end
 
     f.actions

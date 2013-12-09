@@ -2,7 +2,7 @@
 ActiveAdmin.register Bairro do
   menu parent: I18n.t('app.active_admin.content'), priority: 1
 
-  config.per_page = 10  
+  config.per_page = 30  
   filter :cidade, as: :select, collection: ["DF", "GO"]
 
   index do
