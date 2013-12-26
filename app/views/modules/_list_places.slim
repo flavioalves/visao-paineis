@@ -18,7 +18,7 @@ ul.nav.nav-tabs
   .tab-pane id="front-light-#{uf}"
     .panel-group#accordion-front-light
       - if placas.where('categoria' => 'Front-light').count() > 0
-        = render partial: "modules/bairro", collection: bairros.where('categoria' => 'Front-light'), as: :bairro, locals: {type: "Front-light"}
+        = render partial: "modules/bairro", collection: bairros.where('placas.categoria' => 'Front-light'), as: :bairro, locals: {type: "Front-light"}
       - else
         .panel.no-result
           p.alert.alert-danger Não existem placas nesta categoria
@@ -26,7 +26,7 @@ ul.nav.nav-tabs
   .tab-pane id="triedro-#{uf}"
     .panel-group#accordion-triedro
       - if placas.where('categoria' => 'Triedro').count() > 0
-        = render partial: "modules/bairro", collection: bairros.where('categoria' => 'Triedro'), as: :bairro, locals: {type: "Triedro"}
+        = render partial: "modules/bairro", collection: bairros.where('placas.categoria' => 'Triedro'), as: :bairro, locals: {type: "Triedro"}
       - else
         .panel.no-result
           p.alert.alert-danger Não existem placas nesta categoria
