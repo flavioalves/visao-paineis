@@ -18,6 +18,8 @@ gem 'draper'
 gem 'resque'
 gem 'redis'
 
+# avoid heroku plugin injection
+gem 'rails_12factor'
 
 # external services
 gem 'newrelic_rpm'
