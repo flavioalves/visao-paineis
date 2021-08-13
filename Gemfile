@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.2'
+ruby '2.6.6'
 
 gem 'rails',                  '~> 4.2'
 gem 'pg'
@@ -17,6 +17,8 @@ gem 'rufus-scheduler'
 gem 'draper'
 gem 'resque'
 gem 'redis'
+
+gem 'bigdecimal', '1.3.5'
 
 # external services
 gem 'newrelic_rpm'
@@ -44,8 +46,7 @@ gem 'compass-normalize'
 gem 'toolkit'
 
 # twitter bootstrap
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 
 gem "font-awesome-rails",        '~> 3.2'
 
