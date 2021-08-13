@@ -18,7 +18,9 @@ gem 'draper'
 gem 'resque'
 gem 'redis'
 
+# after migration to rails 4
 gem 'bigdecimal', '1.3.5'
+gem 'responders', '~> 2.0'
 
 # external services
 gem 'newrelic_rpm'
