@@ -556,10 +556,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    strong_parameters (0.1.4)
-      actionpack (>= 3.2.0)
-      activemodel (>= 3.2.0)
-      railties (>= 3.2.0)
     subexec (0.2.3)
     temple (0.6.5)
     thin (1.5.1)
@@ -655,7 +651,6 @@ DEPENDENCIES
   singularity-extras
   singularitygs
   slim
-  strong_parameters
   thin
   timecop
   toolkit
@@ -666,4 +661,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.0.0.pre.3
+   2.2.25

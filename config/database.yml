@@ -2,8 +2,6 @@ development:
   adapter: postgresql
   database: visao_paineis_development
   host: localhost
-  user: postgres
-  password:
   pool: 5
   timeout: 5000
   template: template0
