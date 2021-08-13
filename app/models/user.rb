@@ -10,14 +10,14 @@ class User < ActiveRecord::Base
          :validatable,
          :omniauthable
   
-  attr_accessible :email,
-                  :password,
-                  :password_confirmation,
-                  :remember_me,
-                  :name,
-                  :remote_avatar_url,
-                  :avatar,
-                  :logged_with_facebook
+  # attr_accessible :email,
+  #                 :password,
+  #                 :password_confirmation,
+  #                 :remember_me,
+  #                 :name,
+  #                 :remote_avatar_url,
+  #                 :avatar,
+  #                 :logged_with_facebook
 
 
   validates :name, presence: true
