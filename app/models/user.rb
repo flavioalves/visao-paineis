@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :confirmable
   devise :database_authenticatable,
          :registerable,
-         :token_authenticatable,
          :recoverable,
          :rememberable,
          :trackable,
