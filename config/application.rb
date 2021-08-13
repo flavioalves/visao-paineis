@@ -22,5 +22,6 @@ module VisaoPaineis
     config.generators.stylesheet_engine = :sass
     config.assets.initialize_on_precompile = false
     config.time_zone = 'Brasilia'
+    config.active_record.whitelist_attributes = false
   end
 end
