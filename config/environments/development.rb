@@ -9,16 +9,18 @@ VisaoPaineis::Application.configure do
   config.logger.level = Logger.const_get ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG'
   config.action_dispatch.best_standards_support = :builtin
   config.active_record.mass_assignment_sanitizer = :strict
-  config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.assets.compress = false
   # config.assets.debug = true
   config.assets.debug = false
   config.action_mailer.default_url_options = { host: 'localhost:5000' }
   config.assets.prefix = '/assets_dev'
 
+  # Do not eager load code on boot.
+  config.eager_load = false
+
   Slim::Engine.set_default_options pretty: true
   Slim::Engine.set_default_options format: :html5
-  
+
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 
