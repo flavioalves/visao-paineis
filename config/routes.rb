@@ -22,8 +22,8 @@ VisaoPaineis::Application.routes.draw do
 
   root  to:                     'home#index'
   get   'contato'            => 'contacts#index', as: :contacts
-  match 'contato/enviar'     => 'contacts#new',   as: :new_contact, :via => [:get, :post]
-
+  get 'contato/enviar'     => 'contacts#new',   as: :new_contact
+  post 'contato/enviar'     => 'contacts#new',   as: :new_contact
   put   'mercury_content'    => 'mercury_contents#update'
   get   'frontend/:template' => 'frontend#show'
   get   'frontend'           => 'frontend#index'
