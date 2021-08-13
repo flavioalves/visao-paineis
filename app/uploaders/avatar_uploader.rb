@@ -4,8 +4,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
 
-  include Sprockets::Helpers::RailsHelper
-  include Sprockets::Helpers::IsolatedHelper
+  include Sprockets::Rails::Helper
 
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
