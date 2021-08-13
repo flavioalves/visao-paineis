@@ -31,7 +31,7 @@ gem 'ckeditor'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-migrate-rails'
-gem 'mercury-rails'
+gem 'mercury-rails', :git => 'https://github.com/jejacks0n/mercury.git'
 gem 'chosen-rails'
 
 #assets
