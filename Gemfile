@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.6.6'
 
-gem 'rails',                  '~> 3.2.13'
+gem 'rails',                  '~> 4.2'
 gem 'pg'
 gem 'slim'
 gem 'unicorn'
