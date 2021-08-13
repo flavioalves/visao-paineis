@@ -37,7 +37,7 @@ Devise.setup do |config|
 
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'b2b224d661723c8f87ae72f9af8cdcba51cc8d2edb14cf403e07f3d5b5dfa809bb6a2a507947e900decc623800a0bb4ede1747372e881950c38869049a2589c4'
+  config.secret_key = 'b2b224d661723c8f87ae72f9af8cdcba51cc8d2edb14cf403e07f3d5b5dfa809bb6a2a507947e900decc623800a0bb4ede1747372e881950c38869049a2589c4'
 
 
   # Configure which authentication keys should be case-insensitive.
