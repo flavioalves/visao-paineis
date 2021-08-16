@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.6.6'
+ruby '2.4.7'
 
-gem 'rails',                  '~> 4.2'
-gem 'pg'
+gem 'rails', '~> 4.2'
+gem 'pg', '~> 0.15'
 gem 'slim'
 gem 'unicorn'
 gem 'carrierwave'
