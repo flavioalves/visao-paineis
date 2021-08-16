@@ -27,6 +27,6 @@ VisaoPaineis::Application.routes.draw do
   get   'frontend/:template' => 'frontend#show'
   get   'frontend'           => 'frontend#index'
 
-  ActiveAdmin.routes(self)
+  ActiveAdmin.routes(self) rescue ActiveAdmin::DatabaseHitDuringLoad
   get ':slug'                => 'pages#show',     as: :page
 end

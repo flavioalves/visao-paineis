@@ -29,12 +29,13 @@ gem 'sentry-raven'
 # frontend gems
 gem 'ckeditor'
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'jquery-migrate-rails'
 gem 'mercury-rails', :git => 'https://github.com/jejacks0n/mercury.git'
 gem 'chosen-rails'
 
 #assets
+gem 'sass'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
@@ -43,8 +44,6 @@ gem 'modernizr-rails'
 gem 'selectivizr-rails'
 gem 'singularitygs'
 gem 'singularity-extras'
-gem 'compass-rails'
-gem 'compass-normalize'
 gem 'toolkit'
 
 # twitter bootstrap

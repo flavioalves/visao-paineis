@@ -19,7 +19,7 @@ VisaoPaineis::Application.configure do
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   # config.assets.compile = false
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -55,17 +55,18 @@ VisaoPaineis::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
   config.assets.precompile += %w(
-     mercury.js
-     mercury.css
-     top_javascripts.js
-     nwmatcher-1.2.5.js
-     html5shiv-printshiv.js
-     selectivizr.js
-     active_admin.js 
-     active_admin.css
-     active_admin/print.css
-   )
-
+    mercury.js
+    mercury.css
+    top_javascripts.js
+    nwmatcher-1.2.5.js
+    html5shiv-printshiv.js
+    selectivizr.js
+    active_admin.js
+    active_admin.css
+    active_admin/print.css
+    debugging/holmes.css
+    grid.js
+  )
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
