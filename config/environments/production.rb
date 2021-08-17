@@ -10,8 +10,8 @@ VisaoPaineis::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  # config.serve_static_assets = false
-  config.serve_static_assets = true
+  # config.serve_static_files = false
+  config.serve_static_files = true
   config.static_cache_control = 'public, max-age=31536000'
 
   # Compress JavaScripts and CSS
@@ -19,10 +19,13 @@ VisaoPaineis::Application.configure do
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   # config.assets.compile = false
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
+
+  # Do not eager load code on boot.
+  config.eager_load = true
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
@@ -35,7 +38,7 @@ VisaoPaineis::Application.configure do
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
-  # config.log_level = :debug
+  config.log_level = :info
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
@@ -52,22 +55,20 @@ VisaoPaineis::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
   config.assets.precompile += %w(
-     mercury.js
-     mercury.css
-     top_javascripts.js
-     nwmatcher-1.2.5.js
-     html5shiv-printshiv.js
-     selectivizr.js
-     active_admin.js 
-     active_admin.css
-     active_admin/print.css
-   )
-
+    mercury.js
+    mercury.css
+    top_javascripts.js
+    nwmatcher-1.2.5.js
+    html5shiv-printshiv.js
+    selectivizr.js
+    active_admin.js
+    active_admin.css
+    active_admin/print.css
+    debugging/holmes.css
+    grid.js
+  )
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
-
-  # Enable threaded mode
-  config.threadsafe!
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
@@ -78,6 +79,5 @@ VisaoPaineis::Application.configure do
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
-  config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.action_mailer.default_url_options = { :host => ENV['APP_HOSTNAME'] }
 end

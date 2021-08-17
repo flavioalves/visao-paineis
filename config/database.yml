@@ -1,5 +1,6 @@
 development:
   adapter: postgresql
+  encoding: utf8
   database: visao_paineis_development
   host: localhost
   user: postgres
@@ -8,8 +9,10 @@ development:
   timeout: 5000
   template: template0
 
+  encoding: utf8
 test: &test
   adapter: postgresql
+  encoding: utf8
   database: visao_paineis_test
   host: localhost
   user: postgres
@@ -20,6 +23,7 @@ test: &test
 
 production:
   adapter: postgresql
+  encoding: utf8
   database: visao_paineis_production
   host: localhost
   user: postgres

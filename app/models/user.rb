@@ -4,21 +4,20 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :confirmable
   devise :database_authenticatable,
          :registerable,
-         :token_authenticatable,
          :recoverable,
          :rememberable,
          :trackable,
          :validatable,
          :omniauthable
   
-  attr_accessible :email,
-                  :password,
-                  :password_confirmation,
-                  :remember_me,
-                  :name,
-                  :remote_avatar_url,
-                  :avatar,
-                  :logged_with_facebook
+  # attr_accessible :email,
+  #                 :password,
+  #                 :password_confirmation,
+  #                 :remember_me,
+  #                 :name,
+  #                 :remote_avatar_url,
+  #                 :avatar,
+  #                 :logged_with_facebook
 
 
   validates :name, presence: true
